@@ -1,6 +1,11 @@
-basic.showNumber(1)
-basic.showNumber(2)
-basic.showNumber(3)
-basic.showNumber(4)
-basic.showNumber(5)
-basic.showNumber(6)
+let count = 0
+input.onButtonPressed(Button.A, function () {
+    basic.showNumber(randint(1, 6))
+})
+input.onButtonPressed(Button.B, function () {
+    for (let index = 0; index < 10; index++) {
+        basic.showNumber(count)
+        count = 9
+        count += -1
+    }
+})
